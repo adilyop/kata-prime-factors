@@ -3,13 +3,12 @@ class primeFactore {
 
     generate(input) {
         let result = [];
-        if (input > 1) {
-            while (input % 2 === 0) {
-                result.push(2);
-                input = input / 2;
+        let element = 2;
+        while (input > 1) {
+            for (; input % element === 0; input = input / element) {
+                result.push(element);
             }
-            if (input > 1)
-                result.push(input)
+            element += 1;
         }
         return result;
     }

@@ -44,4 +44,10 @@ describe('prime factors Kata Test: \n', () => {
         expect(primeFactors.generate(8)[1]).to.equal(2);
         expect(primeFactors.generate(8)[1]).to.equal(2);
     });
+    it("should return empty table when input is 9", function () {
+        expect(primeFactors.generate(9)).to.be.an('array')
+        expect(primeFactors.generate(9)).to.have.lengthOf(2);
+        expect(primeFactors.generate(9)[0]).to.equal(3);
+        expect(primeFactors.generate(9)[1]).to.equal(3);
+    });
 });
