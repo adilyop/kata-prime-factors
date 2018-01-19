@@ -2,6 +2,9 @@
 class primeFactore {
 
     generate(input) {
+        if (isNaN(input)) {
+            throw new Error("invalid number");
+        }
         let result = [];
         let element = 2;
         while (input > 1) {
